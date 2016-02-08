@@ -1,0 +1,12 @@
+<div id="content-slide">
+  <div class="slideme">
+    {% for slide in page.header.slides %}
+       <div class="slide" {% if page.media[slide.image] %}style="background-image: url({{ page.media[slide.image].url }});"{% endif %}>
+          <h1>{{ slide.heading }}</h1>
+          <h2>{{ slide.subheading }}</h2>
+      </div>
+  {% endfor %}
+</div>
+</div>
+
+{{ content }}

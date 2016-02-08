@@ -1,0 +1,11 @@
+email: hugoaf@yahoo.com.mx
+fullname: Hugo
+title: Ing
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$MArCsoR9QcHpD6ZeSwAJH.3jx5.0VDKYYBnxfCvX7ny6giHZpE9xK

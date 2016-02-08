@@ -1,0 +1,13 @@
+email: ehee@ehee.com
+fullname: 'Ehee Ehee'
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+language: en
+authenticated: true
+hashed_password: $2y$10$KB8/JNj2wSkHt.zngpehx.pugKcabj4IbL.eMXyWZKZsEuAVW07n6

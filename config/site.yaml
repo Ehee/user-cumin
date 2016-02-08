@@ -1,0 +1,18 @@
+title: 'Cumin Tj'
+author:
+  name: Mundo
+  email: joe@test.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
+phone: 1-858-324-1924
+email: cumintj@yahoo.com
