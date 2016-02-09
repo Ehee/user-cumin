@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
-	<div class="pure-g">
+	<div class="pure-g monaybio">
 		<div class="pure-u-1 size-1-2 pure-u-md-1-2">
 			<div id="galeriamona">
 				<div id="content-slide">
@@ -16,25 +16,32 @@
 		<div class="pure-u-1 size-1-2 pure-u-md-1-2">
 			<div id="infomona">
 				
-				<div class="girl_bio"><span class="bio_f">Status:</span><span class="bio_th" {% if page.header.status == "Unavailable" %} style="color:red;" {% endif %}> {{ page.header.status }} </span><br>
-				<span class="bio_f">Born in:</span> <span class="bio_i"> {{ page.header.born }} </span>
-				<br> <span class="bio_f">Height:</span><span class="bio_i"> {{ page.header.height }}</span>
-				<br> <span class="bio_f">Weight:</span><span class="bio_i"> {{ page.header.weight }}</span>
-				{% if page.header.measurements %} <br> <span class="bio_f">Measurements:</span><span class="bio_i"> {{ page.header.measurements }}</span>{% endif %}
-				{% if page.header.breasts %} <br> <span class="bio_f">Breasts:</span><span class="bio_i"> {{ page.header.breasts }}</span> {% endif %}
-				<br> <span class="bio_f">Language:</span><span class="bio_i"> {{ page.header.lang }}</span>
-				<br> <span class="bio_f">Location:</span> <span class="bio_i">{{ page.header.location }}</span>
-				<br> <span class="bio_f">Schedule: </span> <span class="bio_i">{{ page.header.schedule }}</span>
-				<br> <span class="bio_f">Email:</span> <span id="cloak25011"><a href="mailto:{{site.email}}"> {{site.email}} </a></span>
-				<br> <span class="bio_f">Phone:</span> <span class="bio_i"><a href="tel:{{ site.phone }}"> {{ site.phone }} </a></span>
-				<br> <span class="bio_f">Specialties:</span> <span class="bio_i">{{ page.header.specialties }}</span>
-				{% if page.header.reviewlink %} <br> <span class="bio_f">Reviews:</span> <span class="bio_i"><a target="_blank" href= "{{ page.header.reviewlink }}"> {{ page.title }}'s Reviews! </a></span> {% endif %}
-				<br> <span class="bio_f">Notes: </span> <span class="bio_i">{{ page.header.notes }}</span>
+				<div class="girl_bio">
+					<span class="bio_f">Status:</span>
+					<span class="bio_th" {% if page.header.status == "Unavailable" %} style="color:red;" {% endif %}> {{ page.header.status }} </span>
+					<br><span class="bio_f">Born in:</span><span class="bio_i"> {{ page.header.born }}</span>
+					<br><span class="bio_f">Height:</span><span class="bio_i"> {{ page.header.height }}</span>
+					<br><span class="bio_f">Weight:</span><span class="bio_i"> {{ page.header.weight }}</span>
+					{% if page.header.measurements %} <br> <span class="bio_f">Measurements:</span><span class="bio_i"> {{ page.header.measurements }}</span>{% endif %}
+					{% if page.header.breasts %} <br> <span class="bio_f">Breasts:</span><span class="bio_i"> {{ page.header.breasts }}</span> {% endif %}
+					<br> <span class="bio_f">Language:</span><span class="bio_i"> {{ page.header.lang }}</span>
+					<br> <span class="bio_f">Location:</span> <span class="bio_i">{{ page.header.location }}</span>
+					<br> <span class="bio_f">Schedule: </span> <span class="bio_i">{{ page.header.schedule }}</span>
+					<br> <span class="bio_f">Email:</span> <span id="cloak25011"><a href="mailto:{{site.email}}"> {{site.email}} </a></span>
+					<br> <span class="bio_f">Phone:</span> <span class="bio_i"><a href="tel:{{ site.phone }}"> {{ site.phone }} </a></span>
+					<br> <span class="bio_f">Specialties:</span> <span class="bio_i">{{ page.header.specialties }}</span>
+					{% if page.header.reviewlink %} <br> <span class="bio_f">Reviews:</span> <span class="bio_i"><a target="_blank" href= "{{ page.header.reviewlink }}"> {{ page.title }}'s Reviews! </a></span> {% endif %}
+					<br> <span class="bio_f">Notes: </span> <span class="bio_i">{{ page.header.notes }}</span>
+				</div>
+				{{ content }}
 			</div>
-			{{ content }}
 		</div>
 	</div>
-	<div id="lightslider">
-		{% include 'partials/lightslider.html.twig' with {'page': page.find('/girls/gaby', true)} %}
+	<div class="pure-g monasticker">
+		<div class="pure-u-1">
+			<div id="lightslider">
+				{% include 'partials/lightslider.html.twig' with {'page': page.find('/girls', true)} %}
+			</div>
+		</div>
 	</div>
 {% endblock %}
