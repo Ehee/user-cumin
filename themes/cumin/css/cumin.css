@@ -1,5 +1,5 @@
 body {background-color: #000 !important;}
-body, #body, div#sb-site, .slideme-container, .slides, .slide {height:100% !important;}
+body, #body, div#sb-site, .slideme-container, .slides, .slide {height:100%;}
 body #header #navbar {
     font-size: 1.2rem;
 }
@@ -142,7 +142,7 @@ body.pad5 #body {
 }
 #galeriamona .slideme_container {
   overflow: hidden;
-  height: 40rem; 
+  height: 47rem; 
   width: 100%;
   margin-top:-130px;
 }
@@ -187,3 +187,6 @@ body.pad5 #body {
   color: #555;
   font-weight: bold;
 }
+
+.monaybio {margin-bottom: 40px;}
+.monasticker {background-color: #444; padding:20px;}
