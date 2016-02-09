@@ -3,8 +3,6 @@ title: Bio
     type: default
     context: blueprints://pages
 
-child_type: item
-
 
 title: Default
 
@@ -50,37 +48,50 @@ form:
                 type: url
 
 
-            header.content.order.by:
-              type: select
-              label: Order By
-              default: date
-              options:
-                folder: Folder
-                title: Title
-                date: Date
-                default: Default
+            header.born:
+              type: text
+              yaml: true
+              label: Born In
 
-            header.content.order.dir:
-              type: select
-              label: Order
-              default: desc
-              options:
-                asc: Ascending
-                desc: Descending
+            header.height:
+              type: text
+              yaml: true
+              label: Height
 
-            header.content.pagination:
-              type: toggle
-              label: Pagination
-              highlight: 1
-              default: 1
-              options:
-                1: Enabled
-                0: Disabled
-              validate:
-                type: bool
+            header.weight:
+              type: text
+              yaml: true
+              label: Weigh
 
+            header.measurements:
+              type: text
+              yaml: true
+              label: Measurements
 
+            header.breasts:
+              type: text
+              yaml: true
+              label: Breasts
 
+            header.lang:
+              type: text
+              yaml: true
+              label: Language
+
+            header.location:
+              type: text
+              yaml: true
+              label: Location
+
+            header.schedule:
+              type: textarea
+              yaml: true
+              label: Schedule
+
+            header.specialties:
+              type: textarea
+              yaml: true
+              label: Specialties
 
             header.notes:
               type: textarea

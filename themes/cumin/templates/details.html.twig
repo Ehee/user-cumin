@@ -20,7 +20,8 @@
 				<span class="bio_f">Born in:</span> <span class="bio_i"> {{ page.header.born }} </span>
 				<br> <span class="bio_f">Height:</span><span class="bio_i"> {{ page.header.height }}</span>
 				<br> <span class="bio_f">Weight:</span><span class="bio_i"> {{ page.header.weight }}</span>
-				<br> <span class="bio_f">Measurements:</span><span class="bio_i"> {{ page.header.measurements }}</span>
+				{% if page.header.measurements %} <br> <span class="bio_f">Measurements:</span><span class="bio_i"> {{ page.header.measurements }}</span>{% endif %}
+				{% if page.header.breasts %} <br> <span class="bio_f">Breasts:</span><span class="bio_i"> {{ page.header.breasts }}</span> {% endif %}
 				<br> <span class="bio_f">Language:</span><span class="bio_i"> {{ page.header.lang }}</span>
 				<br> <span class="bio_f">Location:</span> <span class="bio_i">{{ page.header.location }}</span>
 				<br> <span class="bio_f">Schedule: </span> <span class="bio_i">{{ page.header.schedule }}</span>
@@ -33,16 +34,7 @@
 			{{ content }}
 		</div>
 	</div>
-<div id="monasslider">
-	    {% include 'partials/lightslider.html.twig' with {'page': page.find('/girls/gaby', true)} %}
-
-
-
-
-
-</div>
-
-
-
-
+	<div id="lightslider">
+		{% include 'partials/lightslider.html.twig' with {'page': page.find('/girls/gaby', true)} %}
+	</div>
 {% endblock %}
