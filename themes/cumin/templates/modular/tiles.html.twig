@@ -1,0 +1,35 @@
+{% set collection = page.find('/girls' ).collection() %}
+
+{# loop pages and get distinct ciudades del campo location del header #}
+{% set ciudades = [] %}
+{% for p in collection %}
+	{% if p.header.location and p.header.location not in ciudades %}
+		{% set ciudades = ciudades|merge([p.header.location]) %}
+	{% endif %}
+{% endfor %}
+
+{# loop en las diferentes ciudades #}
+{% for ciudad in ciudades %}
+
+	<h3 class="titulo-ciudad-tile">{{ ciudad }}</h3>
+	<div id="tiles" class="pure-g">
+		{% for p in collection %}
+
+			{# si corresponde a la ciudad la despliega #}
+			{% if p.header.location|default('Tijuana') == ciudad %}
+				<div class="tile pure-u-1 pure-u-sm-1-2 pure-u-lg-1-4 pure-u-xl-1-5">
+					<a href="{{ p.url() }}">
+						{{ p.media.images|first.cropZoom(400,600).html() }}
+						<span class="girl-title">{{ p.title }}</span>
+						{% if p.header.nueva %}
+						<span class="girl-title2">New!</span>
+					{% endif %}
+					{% if p.header.estado %}
+						<span class="girl-estado">{{ p.header.location }}</span>
+					{% endif %}
+					</a>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+{% endfor %}
