@@ -5,4 +5,15 @@
     {{ content }}
     {% include "forms/form.html.twig" %}
 
+<SCRIPT>
+$( document ).ready(function() {
+	$( "#forma-contacto" ).submit(function( event ) {
+		if ( $(input[name='data[email]']).val() != $(input[name='data[email2]']).val() ) {
+			alert( "Email addresses does not match, please validate" )
+			event.preventDefault()
+		}
+	});
+});
+</SCRIPT>
+
 {% endblock %}
